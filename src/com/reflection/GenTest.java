@@ -6,7 +6,6 @@ import java.util.function.Predicate;
 
 public class GenTest <T extends String & Predicate<Predicate<Integer>>, U extends Predicate<? extends Integer> & Comparator<? extends U>>
 {
-    private <E extends String & Comparator<E>> E get(Comparator<? extends String> obj){return null;}
     public Comparator<String> fieldS;
     public Comparator<T> field0;
     public T field1;
@@ -15,6 +14,13 @@ public class GenTest <T extends String & Predicate<Predicate<Integer>>, U extend
     private Comparator<?> field4;
     private String field5;
     private int field6;
+
+    private <T> GenTest(String a, Comparator<T> a2, Comparable<? extends  T> a3){};
+    public <E> GenTest(int a){};
+    public GenTest(int a, double b){};
+
+    private <E extends String & Comparator<E>> E get(Comparator<? extends String> obj){return null;}
+    protected int foo(String a){return 0;};
 
 
 }
